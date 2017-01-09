@@ -10,7 +10,7 @@ function download_and_extract()
 	local regex='\.bz2$'
 
 	run rm -f "$BASENAME"
-	run wget -O "$BASENAME" "$URL"
+	run wget --no-check-certificate -O "$BASENAME" "$URL"
 	if [[ "$URL" =~ $regex ]]; then
 		run tar xjf "$BASENAME"
 	else
@@ -34,7 +34,7 @@ AUTOCONF_VERSION=2.69
 AUTOMAKE_VERSION=1.15
 LIBTOOL_VERSION=2.4.6
 CMAKE_VERSION=3.0.2
-OPENSSL_VERSION=1.0.2f
+OPENSSL_VERSION=1.0.2j
 FFI_VERSION=3.2.1
 SQLITE3_VERSION=3080702
 MYSQL_LIB_VERSION=6.1.5

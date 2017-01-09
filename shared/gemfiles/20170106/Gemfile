@@ -1,0 +1,34 @@
+source 'https://rubygems.org'
+
+gem 'fast-stemmer'
+gem 'hitimes'
+gem 'redcarpet'
+gem 'snappy'
+gem 'pg'
+gem 'puma', :platforms => :ruby
+gem 'kgio', :platforms => :ruby
+gem 'raindrops', :platforms => :ruby
+gem 'unicorn', :platforms => :ruby
+gem 'curses', :platforms => :ruby
+gem 'nokogiri'
+gem 'sqlite3'
+gem 'mini_portile'
+gem 'mini_portile2'
+gem 'mysql2', :platforms => :ruby
+gem 'json', '1.8.3'
+gem 'ffi'
+gem 'bcrypt'
+gem 'yajl-ruby'
+gem 'thin'
+gem 'RedCloth'
+gem 'escape_utils'
+gem 'posix-spawn', :platforms => :ruby
+gem 'nokogumbo'
+gem 'github-markdown'
+gem 'rugged', :platforms => :ruby
+gem 'charlock_holmes', :platforms => :ruby
+gem 'unf_ext'
+gem 'nio4r', '1.2.1'
+gem 'debug_inspector'
+gem 'websocket-driver'
+gem 'binding_of_caller'
