@@ -15,9 +15,9 @@ SANITY_CHECK_OUTPUT=`cat /system/SANITY_CHECK_OUTPUT`
 DEBUG_SHELL=`cat /system/DEBUG_SHELL`
 
 # Ensure that our static libraries are used first.
-export CFLAGS=-I/usr/local/override/include
-export CXXFLAGS=-I/usr/local/override/include
-export LDFLAGS=-L/usr/local/override/lib
+export CFLAGS="-I/usr/local/override/include -O3"
+export CXXFLAGS="-I/usr/local/override/include -O3"
+export LDFLAGS="-L/usr/local/override/lib"
 export PATH=/usr/local/override/bin:$PATH
 export C_INCLUDE_PATH=/usr/local/override/include
 export CPLUS_INCLUDE_PATH=/usr/local/override/include
@@ -215,6 +215,7 @@ run rm -rf /tmp/ruby/lib/ruby/gems/$RUBY_COMPAT_VERSION/gems/{test-unit,rdoc}-*
 
 function install_gems()
 {
+	run /tmp/ruby/bin/gem update --system --no-document --no-rdoc --no-ri
 	for GEMFILE in /system/gemfiles/*/Gemfile; do
 		run cp "$GEMFILE" /tmp/ruby/
 		if [[ -e "$GEMFILE.lock" ]]; then
